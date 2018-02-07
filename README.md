@@ -3,3 +3,8 @@
 
 A collection of crackmes.
 
+| Puzzle | Difficulty |
+| --- | --- |
+| A | ☆ |
+| B | ☆☆ |
+
