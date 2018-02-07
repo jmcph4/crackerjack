@@ -7,4 +7,5 @@ A collection of crackmes.
 | --- | --- |
 | A | ☆ |
 | B | ☆☆ |
+| C | ☆☆ |
 
