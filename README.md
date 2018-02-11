@@ -9,4 +9,5 @@ A collection of crackmes.
 | B | ☆☆ |
 | C | ☆☆ |
 | D | ☆☆☆ |
+| E | ☆☆☆☆ |
 
