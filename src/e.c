@@ -146,7 +146,8 @@ int main(void)
     pid_t pid = geteuid();
     int8_t* loc = NULL;
     
-    scanf("%s", buf);
+    fgets(buf, sizeof(buf), stdin);
+    buf[strcspn(buf, "\n")] = 0;
 
     if((pid = fork()) != (pid_t)geteuid())
     {
