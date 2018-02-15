@@ -19,13 +19,13 @@ char* getFailString(void)
 }
 
 /* print success string */
-void printFailString(void)
+void printSuccess(void)
 {
     printf("PASS\n");
 }
 
 /* print failure string */
-void printSuccess(void)
+void printFailString(void)
 {
     printf("FAIL\n");
 }
@@ -39,11 +39,11 @@ int main(void)
 
     if(strcmp(buf, getFailString()) == 0)
     {
-        printFailString();
+        printSuccess();
     }
     else
     {
-        printSuccess();
+        printFailString();
     }
 
     return EXIT_SUCCESS;
