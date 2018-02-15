@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define BUF_LEN 8
+#define BUF_LEN 32
 #define MAGIC_STRING_LEN 8
 
 /* generate magic string */
@@ -34,7 +34,8 @@ int main(void)
 {
     char buf[BUF_LEN];
 
-    scanf("%s", buf);
+    fgets(buf, sizeof(buf), stdin);
+    buf[strcspn(buf, '\n')] = 0;
 
     if(strcmp(buf, getFailString()) == 0)
     {
