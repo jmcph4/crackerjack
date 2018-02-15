@@ -31,7 +31,7 @@ int main(void)
     char buf[BUF_LEN];
 
     fgets(buf, sizeof(buf), stdin);
-    buf[strcspn(buf, '\n')] = 0;
+    buf[strcspn(buf, "\n")] = 0;
 
     if(strcmp(buf, getMagicString()) == 0)
     {
