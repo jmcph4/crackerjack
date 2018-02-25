@@ -24,13 +24,14 @@ char* getMagicString(void)
     return s;
 }
 
-#define BUF_LEN 8
+#define BUF_LEN 32
 
 int main(void)
 {
     char buf[BUF_LEN];
 
-    scanf("%s", buf);
+    fgets(buf, sizeof(buf), stdin);
+    buf[strcspn(buf, "\n")] = 0;
 
     if(strcmp(buf, getMagicString()) == 0)
     {

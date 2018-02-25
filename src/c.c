@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define BUF_LEN 8
+#define BUF_LEN 32
 #define MAGIC_STRING_LEN 8
 
 /* generate magic string */
@@ -19,13 +19,13 @@ char* getFailString(void)
 }
 
 /* print success string */
-void printFailString(void)
+void printSuccess(void)
 {
     printf("PASS\n");
 }
 
 /* print failure string */
-void printSuccess(void)
+void printFailString(void)
 {
     printf("FAIL\n");
 }
@@ -34,15 +34,16 @@ int main(void)
 {
     char buf[BUF_LEN];
 
-    scanf("%s", buf);
+    fgets(buf, sizeof(buf), stdin);
+    buf[strcspn(buf, "\n")] = 0;
 
     if(strcmp(buf, getFailString()) == 0)
     {
-        printFailString();
+        printSuccess();
     }
     else
     {
-        printSuccess();
+        printFailString();
     }
 
     return EXIT_SUCCESS;
